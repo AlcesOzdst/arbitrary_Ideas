@@ -1,7 +1,7 @@
 /* General Styles */
 body {
     font-family: 'Courier New', Courier, monospace;
-    background: url('/images/game-background.png') no-repeat center center fixed; /* Use your uploaded image */
+    background: url('images/game-background.png') no-repeat center center fixed; /* Use your uploaded image */
     background-size: cover; /* Ensure the background covers the screen */
     color: #e0e0e0; /* Light text for readability */
     display: flex;
