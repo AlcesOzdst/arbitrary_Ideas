@@ -1,0 +1,253 @@
+/* General Styles */
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background: url('/images/game-background.png') no-repeat center center fixed; /* Use your uploaded image */
+    background-size: cover; /* Ensure the background covers the screen */
+    color: #e0e0e0; /* Light text for readability */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}   
+
+/* Game Container */
+#game-container {
+    width: 90%;
+    max-width: 700px;
+    background: #1a1a1a; /* Slightly lighter background for the container */
+    border: 2px solid #ff4d4d; /* Red border for a "dangerous" feel */
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 0 15px 5px #ff4d4d; /* Add glowing red effect */
+}
+
+/* Headings */
+h1 {
+    font-size: 2rem;
+    color: #ff4d4d; /* Blood-red title */
+    margin-bottom: 20px;
+}
+
+/* Paragraphs */
+p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+/* Buttons */
+button {
+    padding: 10px 20px;
+    background: #333; /* Dark background */
+    color: #fff; /* White text */
+    border: 1px solid #ff4d4d; /* Red border */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+button:hover {
+    background-color: #d43f3f; /* Darker red on hover */
+    color: #000; /* Black text for contrast */
+}
+
+/* Center the Start Button */
+#next-button {
+    margin: 50px auto; /* Center the button horizontally and add vertical space */
+    padding: 15px 30px;
+    background: #ff4d4d; /* Dark button background */
+    color: #fff; /* White text for contrast */
+    border: 1px solid #333; /* Red border to match the theme */
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+#next-button:hover {
+    background-color: #d43f3f; /* Darker red on hover */
+    color: #0d0d0d;
+}
+
+/* Control Buttons (Hidden by Default) */
+#control-buttons {
+    display: none; /* Hidden initially */
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#hint-button,
+#reset-button {
+    padding: 10px 20px;
+    background: #222; /* Dark button background */
+    color: #fff;
+    border: 1px solid #ffa500; /* Orange for theme consistency */
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+#hint-button:hover,
+#reset-button:hover {
+    background: #ffa500; /* Highlight on hover */
+    color: #000; /* Black text for contrast */
+}
+
+/* Score Display */
+#score-container {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: #4caf50; /* Green for score */
+    text-align: center;
+    display: none; /* Hidden by default */
+}
+
+/* Inputs */
+input[type="text"] {
+    padding: 10px;
+    width: calc(100% - 24px); /* Full width with padding adjustment */
+    margin: 10px 0;
+    font-size: 1rem;
+    border: 1px solid #ff4d4d; /* Red border for theme consistency */
+    border-radius: 5px;
+    background: #222; /* Dark background */
+    color: #fff; /* White text */
+}
+
+/* Timer Container */
+#timer-container {
+    display: none; /* Hidden on homepage */
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: rgba(0, 128, 0, 0.8); /* Green for initial safe time */
+    color: white;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%; /* Circular timer */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 15px 5px rgba(0, 128, 0, 0.7); /* Add glowing effect */
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.5rem; /* Larger font for visibility */
+    z-index: 100; /* Ensure it appears above other elements */
+    text-align: center;
+}
+
+/* Timer Text */
+#timer {
+    margin: 0;
+    font-weight: bold;
+}
+
+/* Images */
+img {
+    max-width: 100%;
+    height: auto;
+    margin: 10px 0;
+    border: 2px solid #ff4d4d; /* Add red border to images */
+    border-radius: 5px;
+}
+
+/* Highlight Important Elements */
+#story {
+    font-weight: bold;
+    color: #ffa500; /* Orange for a "clue" look */
+}
+
+#puzzle-container {
+    box-shadow: none; /* Remove shadow */
+    border: none; /* Remove border */
+    background: transparent; /* Transparent background for the container */
+}
+
+/* Final Congratulations */
+#game-container p:last-child {
+    color: #4caf50; /* Green for success */
+    font-size: 1.5rem;
+}
+
+#rules-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.9); /* Dark background for the modal */
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.3);
+    text-align: left;
+    width: 90%;
+    max-width: 500px;
+    z-index: 200;
+}
+
+#rules-container h2 {
+    color: #ffa500; /* Orange for the heading */
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+#rules-container ul {
+    list-style: none;
+    padding: 0;
+}
+
+#rules-container li {
+    margin: 10px 0;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+#rules-container button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #ff4d4d; /* Red button for the theme */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#rules-container button:hover {
+    background: #d43f3f; /* Darker red on hover */
+}
+
+#story button {
+    margin: 10px;
+    padding: 10px 20px;
+    background: #ff4d4d;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#story button:hover {
+    background: #d43f3f;
+}
+
+#hidden-clue {
+    visibility: hidden; /* Initially hidden */
+    border: none; /* Remove any borders */
+    box-shadow: none; /* Remove shadows */
+    background: transparent; /* Ensure no background color */
+    color: #ff4d4d; /* Red color to match the theme when revealed */
+    font-weight: bold;
+    transition: opacity 0.5s ease; /* Smooth transition for visibility */
+}
+
+#hidden-clue:hover {
+    text-shadow: 0 0 5px #ff4d4d; /* Glow effect on hover */
+    transform: scale(1.1); /* Slightly enlarge for interaction */
+    transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
